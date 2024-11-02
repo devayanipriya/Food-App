@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMealHome">
+
+    <ImageView
+        android:id="@+id/mhimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@mipmap/ic_launcher_foreground"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mhTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/mhTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD MEAL"
+        android:textSize="32sp"
+        android:textColor="#1493ED"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mhimage"
+        app:layout_constraintVertical_bias="0.14"/>
+
+    <ImageView
+        android:id="@+id/mealImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@id/mhimage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/hotelName"
+        app:layout_constraintVertical_bias="0.01"/>
+
+    <EditText
+        android:id="@+id/hotelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#1493ED"
+        android:hint="Hotel Name"
+        app:layout_constraintTop_toBottomOf="@id/mhimage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mealImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.04"/>
+
+    <TableLayout
+        android:id="@+id/mealTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mealImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TableRow>
+            <TextView
+                android:text="Meal Name"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <TextView
+                android:text="Price"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <TextView
+                android:text="Availability"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+        </TableRow>
+
+        <TableRow>
+            <EditText
+                android:id="@+id/meal"
+                android:hint="meal name"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/price"
+                android:hint="price"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <EditText
+                android:id="@+id/availability"
+                android:hint="availability"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+        </TableRow>
+
+        <TableRow>
+            <EditText
+                android:hint="meal name"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <EditText
+                android:hint="price"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+            <EditText
+                android:hint="availability"
+                android:textSize="22sp"
+                android:background="#1493ED"
+                android:padding="5dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <android.widget.Button
+        android:id="@+id/addbtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="add"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:background="@drawable/custom_button"
+        app:layout_constraintTop_toBottomOf="@id/mealTable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.9"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bkbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/mealTable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
